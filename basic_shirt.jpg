@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "chrome",
+      "name": "http://127.0.0.1:3002/c:/Users/SABERI/Desktop/jeanwest.html",
+      "request": "launch",
+      "url": "http://127.0.0.1:3002/c:/Users/SABERI/Desktop/jeanwest.html"
+    }
+  ]
+}

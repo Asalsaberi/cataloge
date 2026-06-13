@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Fashion Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+.slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .8s ease;
+}
+
+.slide.active{
+  opacity:1;
+}
+</style>
+  </head>
+  <!-- <div class="bg-red-600 py-3 overflow-hidden">
+  <div class="whitespace-nowrap animate-[marquee_15s_linear_infinite]">
+    <span class="mx-10 font-bold">
+      🔥 تخفیف ویژه تا ۷۰٪ روی محصولات منتخب 🔥
+    </span>
+    <span class="mx-10 font-bold">
+      🔥 تخفیف ویژه تا ۷۰٪ روی محصولات منتخب 🔥
+    </span>
+  </div>
+</div> -->
+
+<!-- <style>
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+</style> -->
+  <body class="bg-black text-white 
+  overflow-x-hidden">
+  <header class="sticky top-0 z-[9999]
+bg-zinc-950/90 backdrop-blur-md
+border-b border-zinc-800">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+      <h1
+  onclick="scrollToTop()"
+  class="text-2xl font-bold text-yellow-400 cursor-pointer hover:text-yellow-300 transition"
+>
+  LUXURY STORE
+</h1>
+<img src="logo.jpg" alt="logo" width="300">
+        <button
+          onclick="toggleCart()"
+          class="bg-yellow-400 text-black px-4 py-2 rounded-xl"
+        >
+          🛍 سبد خرید (<span id="cart-count">0</span>)
+        </button>
+      </div>
+    </header>
+    
+
+    <section class="text-center py-12">
+      <h2 class="text-4xl font-bold mb-4">کالکشن تابستانه</h2>
+      <p class="text-gray-400">جدیدترین محصولات پوشاک</p>
+    </section>
+    
+<section class="relative h-[500px] overflow-hidden">
+  <img
+    src="banner.jpg"
+
+
+    class="w-full h-full object-cover"
+    alt="Jeanwest Collection"
+  >
+
+  <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-6xl font-bold text-white mb-4">
+        JEANWEST
+      </h1>
+
+      <p class="text-xl text-gray-300">
+        Modern Fashion Collection 2026
+      </p>
+    </div>
+  </div>
+  </section>
+  <section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="relative h-[500px] rounded-3xl overflow-hidden">
+
+    <img src="slide1.jpg" class="slide active" alt="">
+    <img src="slide2.jpg" class="slide" alt="">
+    <img src="slide3.jpg" class="slide" alt="">
+    <img src="slide4.jpg" class="slide" alt="">
+
+  </div>
+</section>
+ <!-- <section class="max-w-7xl mx-auto px-6 py-12">
+  <div class="relative h-[500px] rounded-3xl overflow-hidden">
+
+    <img src="slide1.jpg" class="slide active" alt="">
+    <img src="slide2.jpg" class="slide" alt="">
+    <img src="slide3.jpg" class="slide" alt="">
+    <img src="slide4.jpg" class="slide" alt="">
+
+  </div>
+</section> -->
+
+<!-- <section class="max-w-7xl mx-auto px-6 py-12">  -->
+  <!-- <div class="relative overflow-hidden rounded-3xl">
+
+    <div id="slider" class="flex w-[400%] transition-transform duration-700">
+
+      <img src="slide1.jpg" class="w-1/4 h-[500px] object-cover flex-shrink-0">
+
+      <img src="slide2.jpg" class="w-1/4 h-[500px] object-cover flex-shrink-0">
+
+      <img src="slide3.jpg" class="w-1/4 h-[500px] object-cover flex-shrink-0">
+
+      <img src="slide4.jpg" class="w-1/4 h-[500px] object-cover flex-shrink-0">
+
+    </div>
+
+  </div> -->
+
+
+   <!-- <div id="slider" class="flex transition-transform duration-700">
+
+  <div class="relative min-w-full">
+    <img src="slide1.jpg" class="w-full h-[500px] object-cover">
+
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 class="text-5xl font-bold text-white">
+        NEW COLLECTION 2025
+      </h2>
+    </div>
+  </div>
+
+  <div class="relative min-w-full">
+    <img src="slide2.jpg" class="w-full h-[500px] object-cover">
+
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 class="text-5xl font-bold text-white">
+        JEANWEST PREMIUM
+      </h2>
+    </div>
+  </div>
+
+  <div class="relative min-w-full">
+    <img src="slide3.jpg" class="w-full h-[500px] object-cover">
+
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <h2 class="text-5xl font-bold text-white">
+        MODERN STYLE
+      </h2>
+    </div>
+  </div>
+
+</div>  -->
+<!-- </section> -->
+
+    <section class="max-w-5xl mx-auto px-6 py-12">
+  <div class="bg-zinc-900 rounded-3xl p-8 md:p-12 border border-zinc-800">
+
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-bold text-yellow-400 mb-4">
+        درباره جین وست
+      </h2>
+
+      <div class="w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
+    </div>
+
+    <p class="text-gray-300 leading-9 text-justify">
+      جین وست یکی از برندهای شناخته‌شده در صنعت پوشاک است که با تمرکز بر
+      طراحی مدرن، کیفیت بالا و راحتی، مجموعه‌ای متنوع از لباس‌های زنانه و
+      مردانه را ارائه می‌دهد. این برند با بهره‌گیری از متریال باکیفیت و
+      طراحی‌های به‌روز، تلاش می‌کند تجربه‌ای متفاوت از استایل روزمره و
+      پوشش مدرن را برای مشتریان خود فراهم کند.
+    </p>
+
+    <p class="text-gray-400 leading-9 text-justify mt-6">
+      در این کالکشن، مجموعه‌ای از شلوارهای جین، پیراهن‌ها، کت‌ها، کاپشن‌ها
+      و سایر محصولات منتخب ارائه شده‌اند که با دقت در جزئیات و استانداردهای
+      روز صنعت مد طراحی و تولید شده‌اند.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-10">
+
+      <div class="bg-black rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">👕</div>
+        <h3 class="font-bold mb-2">طراحی مدرن</h3>
+        <p class="text-gray-400 text-sm">
+          الهام گرفته از جدیدترین ترندهای روز دنیا
+        </p>
+      </div>
+
+      <div class="bg-black rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">⭐</div>
+        <h3 class="font-bold mb-2">کیفیت بالا</h3>
+        <p class="text-gray-400 text-sm">
+          استفاده از پارچه‌های باکیفیت و بادوام
+        </p>
+      </div>
+
+      <div class="bg-black rounded-2xl p-6 text-center">
+        <div class="text-4xl mb-3">🛍️</div>
+        <h3 class="font-bold mb-2">تنوع محصولات</h3>
+        <p class="text-gray-400 text-sm">
+          مناسب برای استایل‌های مختلف و سلیقه‌های گوناگون
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="max-w-7xl mx-auto px-6 py-8">
+  <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-red-700 via-red-600 to-red-500 p-8 md:p-12">
+
+    <div class="absolute -left-10 -top-10 w-40 h-40 bg-white/10 rounded-full"></div>
+    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full"></div>
+
+    <div class="relative z-10 text-center">
+
+      <p class="text-white text-lg md:text-xl mb-2">
+        جشنواره ویژه فروش
+      </p>
+
+      <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-4">
+        %70 OFF
+      </h2>
+
+      <p class="text-white/90 text-lg md:text-2xl">
+        تا ۷۰٪ تخفیف روی منتخب محصولات جین وست
+      </p>
+
+    </div>
+
+  </div>
+</section>
+    <div class="max-w-7xl mx-auto px-6 mb-8">
+      <select
+        id="category-filter"
+        onchange="filterProducts()"
+        class="bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 w-full md:w-64"
+      >
+        <option value="all">همه محصولات</option>
+        <option value="jeans">جین</option>
+        <option value="shirt">پیراهن</option>
+        <option value="jacket">جکت</option>
+        <option value="coat">پالتو</option>
+        <option value="skirt">دامن</option>
+      </select>
+    </div>
+
+    <div
+      id="product-grid"
+      class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+    ></div>
+
+    <div
+      id="product-modal"
+      class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+    >
+      <div class="bg-zinc-900 rounded-3xl max-w-4xl w-full overflow-hidden">
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script>
+      const products = [
+        {
+          id: 1,
+          name: "شلوار جین مردانه جوتی جینز مدل 31581804",
+          category: "jeans",
+          price: 5169530,
+          img: "men_jean.jpg",
+        },
+        {
+          id: 2,
+          name: "پیراهن مردانه جوتی جینز کد 53531052",
+          category: "shirt",
+          price: 4199300,
+          img: "basic_shirt.jpg",
+        },
+        {
+          id: 3,
+          name: "کت چرم مردانه جوتی جینز کد 53528121",
+          category: "jacket",
+          price: 0,
+          img: "jacket.jpg",
+        },
+        {
+          id: 4,
+          name: "کاپشن زنانه جوتي جينز مدل 53721120",
+          category: "coat",
+          price: 13999000,
+          img: "windbreaker.jpg",
+        },
+        {
+          id: 5,
+          name: "شلوار جین مردانه جوتی جینز کد 54581833",
+          category: "jeans",
+          price: 7049530,
+          img: "jean.jpg",
+        },
+        {
+          id: 6,
+          name: "پولوشرت آستین کوتاه مردانه جوتی جینز مدل 42573474",
+          category: "shirt",
+          price: 1350000,
+          img: "poloshirt.jpg",
+        },
+        {
+          id: 7,
+          name: "شکت زنانه جوتی جینز کد 44721149",
+          category: "jacket",
+          price: 3899700,
+          img: "shaket.jpg",
+        },
+        {
+          id: 8,
+          name: "دامن کوتاه زنانه جین وست مدل 42241502",
+          category: "skirt",
+          price: 2349530,
+          img: "skirt.jpg",
+        },
+      ];
+
+      let cart = [];
+
+      function renderProducts(items) {
+        const grid = document.getElementById("product-grid");
+
+        if (items.length === 0) {
+          grid.innerHTML = `<p class="col-span-full text-center text-gray-400">محصولی یافت نشد</p>`;
+          return;
+        }
+
+        grid.innerHTML = items
+          .map(
+            (product) => `
+    <div onclick="showProduct(${product.id})"
+    class="group bg-zinc-900 rounded-3xl overflow-hidden cursor-pointer
+hover:scale-105 hover:shadow-[0_0_40px_rgba(250,204,21,0.25)]
+transition duration-300"
+     <img src="${product.img}"
+class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+      <div class="p-5">
+        <h3 class="text-lg mb-2">${product.name}</h3>
+        <p class="text-yellow-400">${product.price.toLocaleString("fa-IR")} تومان</p>
+      </div>
+    </div>
+  `,
+          )
+          .join("");
+      }
+
+      function filterProducts() {
+        const category = document.getElementById("category-filter").value;
+        if (category === "all") {
+          renderProducts(products);
+          return;
+        }
+        renderProducts(products.filter((p) => p.category === category));
+      }
+
+      function showProduct(id) {
+        const p = products.find((x) => x.id === id);
+
+        document.getElementById("modal-content").innerHTML = `
+    <div class="grid md:grid-cols-2">
+      <img src="${p.img}" class="w-full h-full object-cover">
+      <div class="p-8">
+        <h2 class="text-3xl mb-4">${p.name}</h2>
+        <p class="text-yellow-400 text-2xl mb-6">${p.price.toLocaleString("fa-IR")} تومان</p>
+        <p class="text-gray-400 mb-8">کیفیت پریمیوم • طراحی مدرن • دوخت حرفه‌ای</p>
+
+        <button onclick="addToCart(${p.id})"
+          class="w-full bg-yellow-400 text-black py-4 rounded-xl mb-3">
+          اضافه به سبد خرید
+        </button>
+
+        <button onclick="closeModal()"
+          class="w-full border border-zinc-600 py-4 rounded-xl">
+          بستن
+        </button>
+      </div>
+    </div>
+  `;
+
+        document.getElementById("product-modal").classList.remove("hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("product-modal").classList.add("hidden");
+      }
+
+      function addToCart(id) {
+        cart.push(products.find((p) => p.id === id));
+        document.getElementById("cart-count").textContent = cart.length;
+        alert("محصول به سبد خرید اضافه شد ✅");
+        closeModal();
+      }
+
+      function toggleCart() {
+        if (cart.length === 0) {
+          alert("سبد خرید خالی است");
+          return;
+        }
+
+        let txt = "🛍 سبد خرید\n\n";
+        cart.forEach((item) => {
+          txt += `• ${item.name} - ${item.price.toLocaleString("fa-IR")} تومان\n`;
+        });
+
+        alert(txt);
+      }
+
+      renderProducts(products);
+      function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+window.addEventListener("scroll", () => {
+  const btn = document.getElementById("backToTop");
+
+  if (window.scrollY > 400) {
+    btn.classList.remove("hidden");
+  } else {
+    btn.classList.add("hidden");
+  }
+});
+const slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+setInterval(() => {
+
+  slides[current].classList.remove("active");
+
+  current = (current + 1) % slides.length;
+
+  slides[current].classList.add("active");
+
+}, 3500);
+    </script>
+    <footer class="bg-zinc-950 border-t border-zinc-800 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <h3 class="text-3xl font-bold text-center text-yellow-400 mb-10">
+      شعب جین وست
+    </h3>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <a href="https://nshn.ir/28_b1-9CWJFRgo"
+         target="_blank"
+         class="bg-zinc-900 p-6 rounded-3xl hover:bg-zinc-800 transition block">
+
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="text-xl font-bold text-yellow-400 mb-2">
+              شعبه سجاد
+            </h4>
+
+            <p class="text-gray-400">
+              مشاهده موقعیت روی نقشه
+            </p>
+          </div>
+
+          <div class="text-4xl">
+            📍
+          </div>
+        </div>
+
+      </a>
+
+      <a href="https://nshn.ir/de_b1i0VeJjM5H"
+         target="_blank"
+         class="bg-zinc-900 p-6 rounded-3xl hover:bg-zinc-800 transition block">
+
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="text-xl font-bold text-yellow-400 mb-2">
+              شعبه سیتی استار
+            </h4>
+
+            <p class="text-gray-400">
+              مشاهده موقعیت روی نقشه
+            </p>
+          </div>
+
+          <div class="text-4xl">
+            📍
+          </div>
+        </div>
+
+      </a>
+
+    </div>
+
+    <div class="border-t border-zinc-800 mt-10 pt-6 text-center text-gray-500">
+      © 2025 Luxury Store | Jeanwest Collection
+    </div>
+
+  </div>
+</footer>
+<button
+  id="backToTop"
+  onclick="scrollToTop()"
+  class="hidden fixed bottom-6 left-6 bg-yellow-400 text-black
+         w-14 h-14 rounded-full shadow-lg z-50
+         hover:scale-110 transition"
+>
+  ↑
+</button>
+  </body>
+</html>

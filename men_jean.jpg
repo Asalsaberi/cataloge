@@ -1,0 +1,38 @@
+function filterProducts() {
+      const value = document.getElementById('filter').value;
+      if (value === 'all') {
+        renderProducts(products);
+      } else {
+        const filtered = products.filter(p => p.category === value);
+        renderProducts(filtered);
+      }
+    }
+
+    function showProduct(id) {
+      const product = products.find(p => p.id === id);
+      alert(نام محصول: ${product.name}\nقیمت: ${product.price.toLocaleString('fa-IR')} تومان\n\nبرای اضافه کردن به سبد خرید، گزینه OK را بزنید.);
+      if (confirm("به سبد خرید اضافه شود؟")) {
+        cart.push(product);
+        document.getElementById('cart-count').textContent = cart.length;
+      }
+    }
+
+    function toggleCart() {
+      if (cart.length === 0) {
+        alert("سبد خرید خالی است");
+      } else {
+        let msg = "محتویات سبد خرید:\n\n";
+        cart.forEach(item => msg += - \( {item.name} ( \){item.price.toLocaleString('fa-IR')} تومان)\n);
+        alert(msg);
+      }
+    }
+
+    // اجرای اولیه
+    window.onload = () => {
+      renderProducts(products);
+      console.log("✅ محصولات لود شدند");
+    };
+  </script>
+
+</body>
+</html>
